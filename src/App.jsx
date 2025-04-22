@@ -4,6 +4,7 @@ import ProductTable from './components/ProductTable';
 import ProductModal from './components/ProductModal';
 import SearchBar from './components/SearchBar';
 import Pagination from './components/Pagination'; // Import the Pagination component
+import './App.css';
 
 const App = () => {
   const [products, setProducts] = useState([]);

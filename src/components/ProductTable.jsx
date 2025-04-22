@@ -1,7 +1,7 @@
 const ProductTable = ({ products, onRowClick }) => {
     return (
-      <div style={{overflowX: "auto"}}>
-      <table className="w-full border border-gray-300 rounded overflow-hidden" style={{minWidth: "400px"}}>
+      <div className="table-responsive">
+      <table className="w-full border border-gray-300 rounded overflow-hidden">
         <thead className="bg-gray-100">
           <tr>
             <th className="p-2 text-left border-b">Title</th>
@@ -13,7 +13,9 @@ const ProductTable = ({ products, onRowClick }) => {
         <tbody>
           {products.map(product => (
             <tr key={product.id} onClick={() => onRowClick(product.id)} className="cursor-pointer hover:bg-gray-50">
-              <td className="p-2 border-b">{product.title}</td>
+              <td className="p-2 border-b title">
+                <span>{product.title}</span>
+              </td>
               <td className="p-2 border-b">
                 <img width={25} src={product.image} alt={product.title} />
               </td>
